@@ -287,7 +287,7 @@ img {
 
 @media (max-width: 600px) {
     main {
-        height: 90vh;
+        height: 95vh;
     }
 
     img {
@@ -315,7 +315,7 @@ img {
     }
 
     .computerChoice {
-        height: 60vh;
+        height: 65vh;
     }
 
     .answerImg div {
