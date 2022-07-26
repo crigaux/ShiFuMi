@@ -9,6 +9,14 @@
     box-sizing: border-box;
 }
 
+html {
+    cursor: none;
+}
+
+a, input, iframe {
+    cursor: none;
+}
+
 body {
     font-family: 'Montserrat', Helvetica, sans-serif;
     overflow-y: hidden;
@@ -192,7 +200,6 @@ iframe {
     background-color: rgb(117, 25, 25);
     color: #f1f1f1;
     border-radius: 15px;
-    cursor: pointer;
     opacity: 0;
 }
 
@@ -230,11 +237,6 @@ input {
     color: #FFFFFF;
     border: solid 4px #225762;
     border-radius: 15px;
-    cursor: pointer;
-}
-
-.computerChoice span {
-    cursor: none;
 }
 
 .answer div{
@@ -247,10 +249,6 @@ input {
 img {
     height: 100px;
     width: 100px;
-}
-
-.playerChoice img {
-    cursor: pointer;
 }
 
 .answerImg {
@@ -344,5 +342,37 @@ img {
     .playerChoice {
         height: 40vh;
         flex-wrap: wrap;
+    }
+}
+
+/* Curseur */
+
+.customCursor {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid #e3e3e3c1;
+    position: fixed;
+    z-index: 100;
+    pointer-events: none;
+}
+
+.customCursor::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid #111;
+    background: #f4f4f4;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@media (pointer:coarse) {
+    .customCursor {
+        display: none;
     }
 }

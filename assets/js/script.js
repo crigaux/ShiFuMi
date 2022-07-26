@@ -91,3 +91,13 @@ document.querySelector('.stats > input').addEventListener('click', () => {
     document.querySelector('.statOverlay').classList.remove('statOverlayOut');
     document.querySelector('.statOverlay').classList.add('statOverlayIn');
 })
+
+// Curseur
+
+const customCursor = document.querySelector('.customCursor');
+
+window.addEventListener('mousemove', handleCustomCursor);
+
+function handleCustomCursor(e) {
+    customCursor.style.transform = `translate(calc(${e.clientX}px - 50%), calc(${e.clientY}px - 50%))`
+}
