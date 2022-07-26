@@ -286,6 +286,9 @@ img {
 }
 
 @media (max-width: 600px) {
+    main {
+        height: 90vh;
+    }
     iframe {
         width: 80%;
         height: 40%;
