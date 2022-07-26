@@ -26,7 +26,7 @@ main {
     position: relative;
     z-index: 1;
     background-color: rgb(73, 73, 73);
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/the-big-bang-theory-living-room.jpg');
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.3)), url('../img/the-big-bang-theory-living-room.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -114,6 +114,18 @@ main {
     z-index: 2;
 }
 
+.reset input {
+    background-color: #589595;
+    color: #FFFFFF;
+    border: solid 4px #225762;
+    font-size: 1rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
 iframe {
     border-radius: 15px;
 }
@@ -198,6 +210,7 @@ iframe {
     padding: 1rem 2rem;
     font-size: 2rem;
     background-color: rgb(117, 25, 25);
+    border: 3px solid rgb(69, 14, 14);
     color: #f1f1f1;
     border-radius: 15px;
     opacity: 0;
@@ -326,7 +339,7 @@ img {
         margin-top: 3rem;
     }
 
-    .stats input, .rules input {
+    .stats input, .rules input, .reset input{
         font-size: 1.5rem;
     }
 
@@ -361,8 +374,8 @@ img {
     content: "";
     display: block;
     position: absolute;
-    width: 10px;
-    height: 10px;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     border: 2px solid #111;
     background: #f4f4f4;

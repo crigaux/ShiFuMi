@@ -28,11 +28,17 @@ let shifumi = (playerChoice) => {
         (playerChoice == 4 && (computerChoice == 5 || computerChoice == 2)) ||
         (playerChoice == 5 && (computerChoice == 3 || computerChoice == 1))) {
             document.querySelector('.answer > span').textContent = 'Gagné';
+            document.querySelector('.answer > span').style.backgroundColor = '#66cc00';
+            document.querySelector('.answer > span').style.borderColor = '#4d9900';
             result = 'win';
     } else if(playerChoice == computerChoice) {
         document.querySelector('.answer > span').textContent = 'Égalité';
+        document.querySelector('.answer > span').style.backgroundColor = '#ffcc66';
+        document.querySelector('.answer > span').style.borderColor = '#ffaa00';
     } else {
         document.querySelector('.answer > span').textContent = 'Perdu';
+        document.querySelector('.answer > span').style.backgroundColor = '#e62e00';
+        document.querySelector('.answer > span').style.borderColor = '#b32400';
         result = 'loose';
     }
 
@@ -90,6 +96,17 @@ document.querySelector('.statOverlay').addEventListener('click', () => {
 document.querySelector('.stats > input').addEventListener('click', () => {
     document.querySelector('.statOverlay').classList.remove('statOverlayOut');
     document.querySelector('.statOverlay').classList.add('statOverlayIn');
+})
+
+// Bouton reset
+
+document.querySelector('.reset > input').addEventListener('click', () => {
+    document.querySelector('.answer > span').style.opacity='0';
+    document.querySelector('.answerImg').style.opacity='0';
+    played.innerHTML = 0; 
+    win.innerHTML = 0; 
+    loose.innerHTML = 0;
+    winrate.innerHTML = 0;
 })
 
 // Curseur
