@@ -1,0 +1,338 @@
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+main {
+    position: relative;
+    z-index: 1;
+    background-color: rgb(73, 73, 73);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/the-big-bang-theory-living-room.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.overlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color:rgba(17, 17, 17, 0.503);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.statOverlay {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color:rgba(17, 17, 17, 0.503);
+    transform: translateY(100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.statContainer {
+    height: 55vh;
+    width: 40%;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 25px;
+}
+
+.statContainer div:nth-child(even) {
+    font-size: 1.5rem;
+    height: 40px;
+    width: 100px;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.statContainer div:nth-child(odd) {
+    font-size: 2rem;
+    font-weight: 700;
+    height: 50px;
+    color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.statOverlayOut {
+    animation: statOverlayOut 0.8s ease-out forwards;
+}
+
+.statOverlayIn {
+    animation: statOverlayIn 0.8s ease-out forwards;
+}
+
+.stats input {
+    background-color: #589595;
+    color: #FFFFFF;
+    border: solid 4px #225762;
+    font-size: 1rem;
+    position: fixed;
+    top: 0;
+    left: 20px;
+    z-index: 2;
+}
+
+iframe {
+    border-radius: 15px;
+}
+
+.overlayOut {
+    animation: overlayOut 0.8s ease-out forwards;
+}
+
+.overlayIn {
+    animation: overlayIn 0.8s ease-out forwards;
+}
+
+@keyframes overlayOut {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes overlayIn {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes statOverlayOut {
+    0% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0%);
+        opacity: 0;
+    }
+}
+
+@keyframes statOverlayIn {
+    0% {
+        transform: scale(0%);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(0%);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(100%);
+        opacity: 1;
+    }
+}
+.computerChoice {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.computerChoice > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.computerChoice span {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    font-size: 2rem;
+    background-color: rgb(117, 25, 25);
+    color: #f1f1f1;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.playerChoiceImg {
+    width: 100px;
+    height: 100px;
+}
+
+.computerChoiceImg {
+    width: 100px;
+    height: 100px;
+}
+
+.playerChoice {
+    height: 50vh;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.playerChoice div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin-top: 2rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+    background-color: #589595;
+    color: #FFFFFF;
+    border: solid 4px #225762;
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+.computerChoice span {
+    cursor: none;
+}
+
+.answer div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f1f1f1;
+}
+
+img {
+    height: 100px;
+    width: 100px;
+    background: transparent;
+}
+
+.answerImg {
+    display: flex;
+    opacity: 0;
+}
+
+.answerImg div {
+    font-size: 4rem;
+    margin: 2rem 3rem;
+}
+
+.rules input {
+    background-color: #589595;
+    color: #FFFFFF;
+    border: solid 4px #225762;
+    font-size: 1rem;
+    position: fixed;
+    top: 0;
+    right: 20px;
+    z-index: 2;
+}
+
+@media (max-width: 600px) {
+    iframe {
+        width: 80%;
+        height: 40%;
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+    }
+
+    .playerChoice {
+        flex-wrap: wrap;
+        height: 40vh;
+    }
+
+    .computerChoice {
+        height: 60vh;
+    }
+    
+    .answerImg div {
+        font-size: 4rem;
+        margin: 2rem 2rem;
+    }
+
+    .statContainer {
+        height: 55vh;
+        width: 65%;
+    }
+
+    .stats input, .rules input {
+        padding-bottom: 0.5rem;
+        margin: 1rem;
+    }
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+    img {
+        width: 150px;
+        height: 150px;
+        margin: 1rem;
+    }
+
+    input {
+        width: 200px;
+        height: 70px;
+        font-size: 3rem;
+    }
+
+    .computerChoice span {
+        font-size: 5rem;
+        margin-top: 3rem;
+    }
+
+    .stats input, .rules input {
+        font-size: 1.5rem;
+    }
+
+    .playerChoiceImg, .computerChoiceImg {
+        height: 150px;
+        width: 150px;
+    }
+
+    .computerChoice {
+        height: 60vh;
+    }
+
+    .playerChoice {
+        height: 40vh;
+        flex-wrap: wrap;
+    }
+}
