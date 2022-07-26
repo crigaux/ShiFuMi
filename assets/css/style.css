@@ -301,7 +301,7 @@ img {
     }
 
     .reset input {
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -20%);
     }
 
     .overlay {
@@ -312,6 +312,7 @@ img {
     .playerChoice {
         flex-wrap: wrap;
         height: 30vh;
+        padding-bottom: 3vh;
     }
 
     .computerChoice {
