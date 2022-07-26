@@ -289,9 +289,19 @@ img {
     main {
         height: 90vh;
     }
+
+    img {
+        height: 80px;
+        width: 80px;
+    }
+
     iframe {
         width: 80%;
         height: 40%;
+    }
+
+    .reset input {
+        transform: translate(-50%, -50%);
     }
 
     .overlay {
@@ -301,7 +311,7 @@ img {
 
     .playerChoice {
         flex-wrap: wrap;
-        height: 40vh;
+        height: 30vh;
     }
 
     .computerChoice {
