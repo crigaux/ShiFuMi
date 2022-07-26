@@ -42,8 +42,7 @@ let shifumi = (playerChoice) => {
         result = 'loose';
     }
 
-    // document.querySelector('.answer > span').style.opacity='1';
-    // document.querySelector('.answerImg').style.opacity='1';
+    document.querySelector('.answer > span').style.opacity='1';
 
     return result;
 }
@@ -101,8 +100,7 @@ document.querySelector('.stats > input').addEventListener('click', () => {
 // Bouton reset
 
 document.querySelector('.reset > input').addEventListener('click', () => {
-    // document.querySelector('.answer > span').style.opacity='0';
-    // document.querySelector('.answerImg').style.opacity='0';
+    document.querySelector('.answer > span').style.opacity='0';
     document.querySelector('.computerChoiceImg').setAttribute('src', './assets/img/Sheldon.webp');
     document.querySelector('.playerChoiceImg').setAttribute('src', './assets/img/kripke.jpg');
     played.innerHTML = 0; 
