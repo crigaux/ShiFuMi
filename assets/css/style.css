@@ -9,12 +9,8 @@
     box-sizing: border-box;
 }
 
-html {
-    cursor: none;
-}
-
-input, iframe {
-    cursor: none;
+input, .playerChoice img, .chooseYourPlayer {
+    cursor: pointer;
 }
 
 body {
@@ -30,6 +26,7 @@ main {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    height: 100vh;
 }
 
 .overlay {
@@ -39,6 +36,7 @@ main {
     top: 0;
     left: 0;
     z-index: 3;
+    transform: translateY(-100%);
     background-color:rgba(17, 17, 17, 0.503);
     display: flex;
     flex-direction: column;
@@ -431,34 +429,55 @@ img {
         font-size: 3rem;
     }
 }
-/* Curseur */
 
-.customCursor {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 1px solid #969696a6;
-    position: fixed;
-    z-index: 100;
-    pointer-events: none;
-}
-
-.customCursor::after {
-    content: "";
-    display: block;
+#playerChoiceMain {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url('../img/cafeteria.webp');
+    background-position: center;
+    background-size: cover;
     position: absolute;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    border: 2px solid #111;
-    background: #f4f4f4;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-@media (pointer:coarse) {
-    .customCursor {
-        display: none;
-    }
+#playerChoiceMain.active {
+    animation: overlayOut 0.8s ease-out forwards;
 }
+
+.chooseYourPlayerContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.chooseYourPlayer {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.choiceMessage {
+    color: #f1f1f1f1;
+    font-size: 5rem;
+    font-weight: 900;
+    margin-bottom: 3rem;
+}
+
+/* .rules,
+.stats,
+.reset,
+.overlay {
+    display: none;
+}
+
+main {
+    display: none;
+} */
