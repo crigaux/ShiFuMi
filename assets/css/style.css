@@ -107,7 +107,6 @@ main {
     background-color: #589595;
     color: #FFFFFF;
     border: solid 4px #225762;
-    font-size: 1rem;
     position: fixed;
     top: 0;
     left: 20px;
@@ -118,7 +117,6 @@ main {
     background-color: #589595;
     color: #FFFFFF;
     border: solid 4px #225762;
-    font-size: 1rem;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -217,15 +215,15 @@ iframe {
 }
 
 .playerChoiceImg {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
 
 .computerChoiceImg {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -264,8 +262,8 @@ input {
 }
 
 img {
-    height: 100px;
-    width: 100px;
+    height: 150px;
+    width: 150px;
 }
 
 .answerImg {
@@ -282,7 +280,6 @@ img {
     background-color: #589595;
     color: #FFFFFF;
     border: solid 4px #225762;
-    font-size: 1rem;
     position: fixed;
     top: 0;
     right: 20px;
@@ -323,6 +320,16 @@ img {
         height: 65vh;
     }
 
+    .playerChoiceImg {
+        height: 100px;
+        width: 100px;
+    }
+
+    .computerChoiceImg  {
+        height: 100px;
+        width: 100px;
+    }
+
     .answerImg div {
         font-size: 4rem;
         margin: 2rem 2rem;
@@ -336,6 +343,35 @@ img {
     .stats input, .rules input {
         padding-bottom: 0.5rem;
         margin: 1rem;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+}
+
+@media (orientation: landscape) {
+    img {
+        width: 100px;
+        height: 100px;
+    }
+
+    input {
+        font-size: 1rem;
+    }
+
+    .computerChoiceImg, .playerChoiceImg {
+        width: 100px;
+        height: 100px;
+    }
+
+    .reset input {
+        transform: translate(-50%, -100%);
+    }
+
+    .answerImg div {
+        font-size: 2rem;   
+        margin: 1rem; 
     }
 }
 
@@ -376,6 +412,25 @@ img {
     }
 }
 
+@media only screen and (min-device-width : 768px) and (min-device-height : 600px) and (orientation : landscape) {
+    input {
+        font-size: 2rem;
+    }
+
+    img {
+        height: 120px;
+        width: 120px;
+    }
+
+    .playerChoiceImg, .computerChoiceImg {
+        height: 150px;
+        width: 150px;
+    }
+
+    .computerChoice div {
+        font-size: 3rem;
+    }
+}
 /* Curseur */
 
 .customCursor {
